@@ -189,12 +189,12 @@ class Instructor extends Lambdasian {
 */
 class Student extends Lambdasian {
 
-    constructor({name: name, age: age, location: location, previousBackground: previousBackground, className: className, favSubjects: favSubjects}) {
-    super({name: name, age: age, location: location})
+    constructor(obj) {
+    super(obj)
 
-    this.previousBackground = previousBackground;
-    this.className = className;
-    this.favSubjects = favSubjects
+    this.previousBackground = obj.previousBackground;
+    this.className = obj.className;
+    this.favSubjects = obj.favSubjects
     }
 
     listSubjects() {
@@ -228,11 +228,11 @@ class Student extends Lambdasian {
 */
 class ProjectManager extends Instructor {
 
-    constructor ({name: name, age: age, location: location, specialty: specialty, favLanguage: favLanguage, catchPhrase: catchPhrase, gradClassName: gradClassName, favInstructor: favInstructor}) {
-      super({name: name, age: age, location: location, specialty: specialty, favLanguage: favLanguage, catchPhrase: catchPhrase});
+    constructor (obj) {
+      super(obj);
 
-      this.gradClassName = gradClassName;
-      this.favInstructor = favInstructor
+      this.gradClassName = obj.gradClassName;
+      this.favInstructor = obj.favInstructor
     }
 
     standUp(channel) {
